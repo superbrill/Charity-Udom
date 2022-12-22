@@ -1,0 +1,221 @@
+<html>
+      <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data Charitable Group UDOM</title>
+	<link rel="stylesheet" href="style.css">
+      </head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+  }
+
+body{	background-color: green;
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(oceanfance2.jpg);
+	background-position:center;
+	background-size:cover;
+      }
+.container{
+	width:360px;
+	height:350px;
+	margin: 8% auto;
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	   }
+h3{
+	text-align: center;
+	margin-bottom:40px;
+	color:#777;
+   }
+.container form{
+	width: 280px;
+	position: absolute;
+	top: 100px;
+	left: 40px;
+	transition: 0.5s;
+		}
+form input{
+	width: 100%;
+	padding: 10px 5px;
+	margin: 5px 0;
+	border: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+		}
+::placehold{
+	color: #777;
+		}
+.btn-box{
+	width: 100%;
+	margin: 3px auto;
+	text-align: center;
+		}
+form button{
+	width: 110px;
+	height: 35px;
+	margin: 0 10px;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	border: 0;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+		}
+#form2{
+	left: 450px;
+	}
+#form3{
+	left: 450px;
+	}
+.step-row{
+	width: 360px;
+	height: 40px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 -1px 5px -1px #000;
+	position: relative;
+		}
+.step-col{
+	width: 120px;
+	color: #333;
+	text-align: center;
+	position: relative;
+	   }
+#progress{
+	transition: 1s;
+	position: absolute;
+	height: 100%;
+	width: 120px;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+
+	}
+#progress::after{
+	content: '';
+	height: 0;
+	width: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	position: absolute;
+	right: -20px;
+	top: 0;
+	border-left: 20px solid #ffad06;
+		}	
+
+
+
+
+</style>
+
+
+
+      <body>
+	<div class="container">
+
+		<form id="form1">
+		 <h3>PERSONAL INFOMATION</h3>
+                   <input type="text" placeholder="Enter first name" required />
+              	   <input type="text" placeholder="Enter second name" required />     
+		   <input type="text" placeholder="Enter last name" required />
+		
+		  <div class="btn-box">
+			<button type="button" id="NEXT1">NEXT</button>
+
+		  </div>
+
+		</form>
+	
+		<form id="form2">
+		 <h3>SOCIAL LINKS</h3>
+                   <input type="text" placeholder="E-MAIL" required />
+              	   <input type="text" placeholder="WhatsApp Number (optional)">     
+		   <input type="text" placeholder="Facebook Username (optional)">     
+		  <div class="btn-box">
+			<button type="button" id="BACK1">BACK</button>
+			<button type="button" id="NEXT2">NEXT</button>
+			
+
+		  </div>
+
+		</form>
+
+
+		<form id="form3">
+		 <h3>ROOM INFORMATION</h3>
+                   <input type="text" placeholder="Block Number" required />
+              	   <input type="text" placeholder="Room Number" required/>     
+		   <input type="text" placeholder="Floor Number (optional)">     
+		  <div class="btn-box">
+			<button type="button" id="BACK2">BACK</button>
+			<button type="button">SUBMIT</button>
+			
+
+		  </div>
+
+		</form>
+
+		<dvi class="step-row">
+		   <div id="progress"></div>
+		     <div class="step-col"><small>Step 1</small></div>	
+		     <div class="step-col"><small>Step 2</small></div>	
+		     <div class="step-col"><small>Step 3</small></div>	
+		
+		</dvi>
+
+	</div>
+
+<script>
+	var form1 = document.getElementById("form1");
+	var form2 = document.getElementById("form2");
+	var form3 = document.getElementById("form3");
+
+	var NEXT1 = document.getElementById("NEXT1");
+	var NEXT2 = document.getElementById("NEXT2");
+	var BACK1 = document.getElementById("BACK1");
+	var BACK2 = document.getElementById("BACK2");
+	var progress = document.getElementById("progress");
+	
+	NEXT1.onclick = function(){
+	  form1.style.left = "-450px";
+	  form2.style.left = "40px";
+	  progress.style.width = "240px"	  
+			}
+	BACK1.onclick = function(){
+	  form1.style.left = "40px";
+	  form2.style.left = "450px";
+	  progress.style.width = "120px"	  
+			}
+	NEXT2.onclick = function(){
+	  form2.style.left = "-450px";
+	  form3.style.left = "40px";
+	  progress.style.width = "360px"	  
+			}
+	BACK2.onclick = function(){
+	  form2.style.left = "40px";
+	  form3.style.left = "450px";
+	  progress.style.width = "240px"	  
+			}
+
+
+
+</script>
+</script>
+
+</script>
+
+</script>
+
+
+
+
+      </body>
+</html>
