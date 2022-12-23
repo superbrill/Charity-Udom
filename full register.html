@@ -1,221 +1,225 @@
-<html>
-      <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Data Charitable Group UDOM</title>
-	<link rel="stylesheet" href="style.css">
-      </head>
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-
-*{
-     margin: 0;
-     padding: 0;
-     font-family: sans-serif;
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(red, blue, green);
+  background-color: #cccccc;
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
   }
-
-body{	background-color: green;
-	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(oceanfance2.jpg);
-	background-position:center;
-	background-size:cover;
-      }
-.container{
-	width:360px;
-	height:350px;
-	margin: 8% auto;
-	background: #fff;
-	border-radius: 5px;
-	position: relative;
-	overflow: hidden;
-	   }
-h3{
-	text-align: center;
-	margin-bottom:40px;
-	color:#777;
-   }
-.container form{
-	width: 280px;
-	position: absolute;
-	top: 100px;
-	left: 40px;
-	transition: 0.5s;
-		}
-form input{
-	width: 100%;
-	padding: 10px 5px;
-	margin: 5px 0;
-	border: 0;
-	border-bottom: 1px solid #999;
-	outline: none;
-	background: transparent;
-		}
-::placehold{
-	color: #777;
-		}
-.btn-box{
-	width: 100%;
-	margin: 3px auto;
-	text-align: center;
-		}
-form button{
-	width: 110px;
-	height: 35px;
-	margin: 0 10px;
-	background: linear-gradient(to right, #ff105f, #ffad06);
-	border-radius: 30px;
-	border: 0;
-	outline: none;
-	color: #fff;
-	cursor: pointer;
-		}
-#form2{
-	left: 450px;
-	}
-#form3{
-	left: 450px;
-	}
-.step-row{
-	width: 360px;
-	height: 40px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	box-shadow: 0 -1px 5px -1px #000;
-	position: relative;
-		}
-.step-col{
-	width: 120px;
-	color: #333;
-	text-align: center;
-	position: relative;
-	   }
-#progress{
-	transition: 1s;
-	position: absolute;
-	height: 100%;
-	width: 120px;
-	background: linear-gradient(to right, #ff105f, #ffad06);
-
-	}
-#progress::after{
-	content: '';
-	height: 0;
-	width: 0;
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	position: absolute;
-	right: -20px;
-	top: 0;
-	border-left: 20px solid #ffad06;
-		}	
-
-
-
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
 
 </style>
 
 
+  <body>
+       <form action="https://formspree.io/f/xpzeayko" method="POST" accept-charset="UTF-8" class="form" >
+    <section class="container">
+     <center> <h1>DATA SCIENTIST CHARITABLE GROUP</h1></center>
+	<header> Register form 2023 </header>
+    
 
-      <body>
-	<div class="container">
-
-		<form id="form1">
-		 <h3>PERSONAL INFOMATION</h3>
-                   <input type="text" placeholder="Enter first name" required />
-              	   <input type="text" placeholder="Enter second name" required />     
-		   <input type="text" placeholder="Enter last name" required />
-		
-		  <div class="btn-box">
-			<button type="button" id="NEXT1">NEXT</button>
-
-		  </div>
-
-		</form>
-	
-		<form id="form2">
-		 <h3>SOCIAL LINKS</h3>
-                   <input type="text" placeholder="E-MAIL" required />
-              	   <input type="text" placeholder="WhatsApp Number (optional)">     
-		   <input type="text" placeholder="Facebook Username (optional)">     
-		  <div class="btn-box">
-			<button type="button" id="BACK1">BACK</button>
-			<button type="button" id="NEXT2">NEXT</button>
-			
-
-		  </div>
-
-		</form>
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" name="Name" placeholder="Enter full name" required />
+        </div>
 
 
-		<form id="form3">
-		 <h3>ROOM INFORMATION</h3>
-                   <input type="text" placeholder="Block Number" required />
-              	   <input type="text" placeholder="Room Number" required/>     
-		   <input type="text" placeholder="Floor Number (optional)">     
-		  <div class="btn-box">
-			<button type="button" id="BACK2">BACK</button>
-			<button type="button">SUBMIT</button>
-			
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="Email" name="Email" placeholder="Enter email address" required />
+        </div>
 
-		  </div>
-
-		</form>
-
-		<dvi class="step-row">
-		   <div id="progress"></div>
-		     <div class="step-col"><small>Step 1</small></div>	
-		     <div class="step-col"><small>Step 2</small></div>	
-		     <div class="step-col"><small>Step 3</small></div>	
-		
-		</dvi>
-
-	</div>
-
-<script>
-	var form1 = document.getElementById("form1");
-	var form2 = document.getElementById("form2");
-	var form3 = document.getElementById("form3");
-
-	var NEXT1 = document.getElementById("NEXT1");
-	var NEXT2 = document.getElementById("NEXT2");
-	var BACK1 = document.getElementById("BACK1");
-	var BACK2 = document.getElementById("BACK2");
-	var progress = document.getElementById("progress");
-	
-	NEXT1.onclick = function(){
-	  form1.style.left = "-450px";
-	  form2.style.left = "40px";
-	  progress.style.width = "240px"	  
-			}
-	BACK1.onclick = function(){
-	  form1.style.left = "40px";
-	  form2.style.left = "450px";
-	  progress.style.width = "120px"	  
-			}
-	NEXT2.onclick = function(){
-	  form2.style.left = "-450px";
-	  form3.style.left = "40px";
-	  progress.style.width = "360px"	  
-			}
-	BACK2.onclick = function(){
-	  form2.style.left = "40px";
-	  form3.style.left = "450px";
-	  progress.style.width = "240px"	  
-			}
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" name="Phone" placeholder="Enter phone number" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" value="male" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" value="female"/>
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" value="other"/>
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
 
 
-
-</script>
-</script>
-
-</script>
-
-</script>
-
-
-
-
-      </body>
+        <div class="input-box address">
+          <div class="select-box">
+              
+              <select input name="Course">
+                <option hidden>SELECT COURSE</option>
+                <option>Bsc Mathematics and Statistics</option>
+                <option>Bsc Actuarial Statistics</option>
+                <option>Bsc Statistics</option>
+               
+              </select>
+            </div>
+          <div class="column">
+            <div class="select-box">
+              <select input name="Block ">
+                <option hidden>BLOCK NUMBER</option>
+                <option>Block 1</option>
+                <option>Block 2</option>
+                <option>Block 3</option>
+                <option>Block 4</option>
+		<option>Block 5</option>
+		<option>Block 6</option>
+		<option>Block 7</option>
+		<option>Block 8</option>
+		<option>Block 9</option>
+		<option>Block 10</option>
+		<option>Block 11</option>
+		<option>Block 12</option>
+		<option>Block 13</option>
+		<option>Block 14</option>
+              </select>
+            </div>
+            <input type="Number" name="Room number" placeholder="Enter your Room Number" required />
+          </div>
+          
+        </div>
+        <button type="submit" value="Send">Submit</button>
+  
+    </section>
+        </form>
+  </body>
 </html>
